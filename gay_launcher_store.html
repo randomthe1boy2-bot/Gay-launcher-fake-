@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gay Launcher - Store</title>
+    
+    <!-- Discord / Open Graph Meta Tags -->
+    <meta property="og:title" content="Gay Launcher - Store">
+    <meta property="og:description" content="The ultimate gaming platform. Featured today: Femboy Island.">
+    <meta property="og:image" content="https://placehold.co/1200x630/171a21/66c0f4?text=Gay+Launcher&font=Montserrat">
+    <meta property="og:url" content="https://store.gaylauncher.net">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#171a21">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Motiva+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Motiva Sans"', 'Arial', 'Helvetica', 'sans-serif'],
+                    },
+                    colors: {
+                        steam: {
+                            base: '#1b2838', // Main body background
+                            header: '#171a21', // Top global header
+                            nav: '#3d4450', // Store nav bar
+                            blue: '#66c0f4', // Classic link blue
+                            light: '#c6d4df', // Normal text
+                            dark: '#101822', // Darker backgrounds
+                            green: '#A4D007', // Price green
+                            btnGreen1: '#799905', // Button gradient top
+                            btnGreen2: '#536904', // Button gradient bottom
+                            discountBg: '#4c6b22', // Discount tag bg
+                            discountText: '#BEEE11' // Discount tag text
+                        }
+                    },
+                    boxShadow: {
+                        'steam-capsule': '0 0 10px 0 rgba(0, 0, 0, 0.5)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { background-color: #1b2838; }
+        /* Scrollbar to match Steam */
+        ::-webkit-scrollbar { width: 12px; }
+        ::-webkit-scrollbar-track { background: #171a21; }
+        ::-webkit-scrollbar-thumb { background: #434953; border-radius: 2px; }
+        ::-webkit-scrollbar-thumb:hover { background: #66c0f4; }
+        
+        .bg-page-gradient {
+            background: url('https://placehold.co/1920x1080/1b2838/1b2838') no-repeat center top;
+            background-color: #1b2838;
+        }
+
+        .hero-bg {
+            background: radial-gradient(circle at top, rgba(50, 70, 95, 0.8) 0%, rgba(27, 40, 56, 1) 80%);
+        }
+
+        .capsule:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 15px 0 rgba(102, 192, 244, 0.4);
+            transition: all 0.2s ease;
+        }
+    </style>
+</head>
+<body class="text-steam-light font-sans overflow-x-hidden min-h-screen flex flex-col">
+
+    <!-- Global Header -->
+    <header class="bg-steam-header w-full flex justify-center py-4 px-4 sticky top-0 z-50 shadow-md">
+        <div class="max-w-[940px] w-full flex justify-between items-center">
+            <!-- Logo & Main Nav -->
+            <div class="flex items-center space-x-10">
+                <a href="#" class="flex items-center space-x-2 text-2xl font-bold text-steam-light hover:text-white transition">
+                    <i class="ph-fill ph-game-controller text-steam-blue text-3xl"></i>
+                    <span class="tracking-wider uppercase">Gay Launcher</span>
+                </a>
+                
+                <nav class="hidden md:flex space-x-6 text-sm font-semibold uppercase tracking-wide">
+                    <a href="#" class="text-steam-blue border-b-2 border-steam-blue pb-1">Store</a>
+                    <a href="#" class="text-steam-light hover:text-white transition">Community</a>
+                    <a href="#" class="text-steam-light hover:text-white transition">About</a>
+                    <a href="#" class="text-steam-light hover:text-white transition">Support</a>
+                </nav>
+            </div>
+
+            <!-- User Actions -->
+            <div class="hidden md:flex items-center space-x-4 text-xs">
+                <button class="bg-[#5c7e10] hover:bg-[#799905] text-white px-3 py-1 rounded-sm flex items-center space-x-1 transition">
+                    <i class="ph-fill ph-download-simple"></i>
+                    <span>Install Launcher</span>
+                </button>
+                <div class="flex items-center space-x-2 border-l border-gray-600 pl-4">
+                    <a href="#" class="hover:text-white text-gray-300">login</a>
+                    <span class="text-gray-500">|</span>
+                    <a href="#" class="hover:text-white text-gray-300">language <i class="ph ph-caret-down inline"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Store Sub-navigation Container -->
+    <div class="w-full flex justify-center bg-[#1b2838] pt-6 pb-2">
+        <div class="max-w-[940px] w-full">
+            <!-- Store Nav Bar -->
+            <div class="bg-gradient-to-r from-[#3e6796] to-[#162130] rounded shadow-lg flex items-center justify-between px-2 h-10 mb-8 z-40 relative">
+                <nav class="flex space-x-1 text-sm font-medium shadow-sm">
+                    <a href="#" class="px-4 py-1.5 text-white bg-[#4787c8] bg-opacity-40 rounded shadow-[inset_0_0_5px_rgba(0,0,0,0.5)]">Your Store <i class="ph ph-caret-down inline text-xs"></i></a>
+                    <a href="#" class="px-4 py-1.5 text-steam-light hover:text-white transition">New & Noteworthy <i class="ph ph-caret-down inline text-xs"></i></a>
+                    <a href="#" class="px-4 py-1.5 text-steam-light hover:text-white transition">Categories <i class="ph ph-caret-down inline text-xs"></i></a>
+                    <a href="#" class="px-4 py-1.5 text-steam-light hover:text-white transition">Points Shop</a>
+                    <a href="#" class="px-4 py-1.5 text-steam-light hover:text-white transition">News</a>
+                    <a href="#" class="px-4 py-1.5 text-steam-light hover:text-white transition">Labs</a>
+                </nav>
+                
+                <!-- Search -->
+                <div class="relative mr-1">
+                    <input type="text" placeholder="search" class="bg-[#316282] border border-black/30 rounded text-sm text-white px-3 py-1 w-48 focus:outline-none focus:bg-[#3a759c] placeholder-[#6fa7cd] italic shadow-[inset_0_1px_3px_rgba(0,0,0,0.3)]">
+                    <button class="absolute right-2 top-1.5 text-[#66c0f4] hover:text-white">
+                        <i class="ph ph-magnifying-glass font-bold"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Featured & Recommended Hero -->
+            <h2 class="text-white text-lg tracking-wider mb-2 font-medium">FEATURED & RECOMMENDED</h2>
+            
+            <div class="w-full bg-[#0a141d] flex flex-col md:flex-row shadow-steam-capsule mb-12 relative group cursor-pointer">
+                <!-- Main Image -->
+                <div class="w-full md:w-2/3 h-[350px] bg-[#1a2a3a] relative overflow-hidden">
+                    <img src="https://placehold.co/800x450/4c1d95/fbcfe8?text=Femboy+Island&font=Montserrat" alt="Femboy Island" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                </div>
+                
+                <!-- Info Panel -->
+                <div class="w-full md:w-1/3 p-4 flex flex-col justify-between hero-bg border-l border-[#2a475e]/30">
+                    <div>
+                        <h3 class="text-2xl text-white font-bold mb-4">Femboy Island</h3>
+                        
+                        <!-- Small Screenshots -->
+                        <div class="grid grid-cols-2 gap-2 mb-4">
+                            <div class="h-16 bg-[#2a475e] relative overflow-hidden opacity-70 hover:opacity-100 transition"><img src="https://placehold.co/400x225/2e1065/e9d5ff?text=Gameplay+1" class="w-full h-full object-cover"></div>
+                            <div class="h-16 bg-[#2a475e] relative overflow-hidden opacity-70 hover:opacity-100 transition"><img src="https://placehold.co/400x225/2e1065/e9d5ff?text=Gameplay+2" class="w-full h-full object-cover"></div>
+                            <div class="h-16 bg-[#2a475e] relative overflow-hidden opacity-70 hover:opacity-100 transition"><img src="https://placehold.co/400x225/2e1065/e9d5ff?text=Customization" class="w-full h-full object-cover"></div>
+                            <div class="h-16 bg-[#2a475e] relative overflow-hidden opacity-70 hover:opacity-100 transition"><img src="https://placehold.co/400x225/2e1065/e9d5ff?text=Housing" class="w-full h-full object-cover"></div>
+                        </div>
+
+                        <!-- Info / Reviews -->
+                        <div class="text-xs mb-3 space-y-1">
+                            <div class="text-steam-light">Now Available</div>
+                            <div class="flex items-center space-x-2">
+                                <span class="bg-[#4c6b22] text-[#BEEE11] px-1 rounded-sm text-[10px]">Top Seller</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Tags -->
+                        <div class="flex flex-wrap gap-1 mb-4">
+                            <span class="bg-[#384e5e] hover:bg-[#466277] text-[#66c0f4] text-xs px-2 py-0.5 rounded-sm transition">Action RPG</span>
+                            <span class="bg-[#384e5e] hover:bg-[#466277] text-[#66c0f4] text-xs px-2 py-0.5 rounded-sm transition">Character Customization</span>
+                            <span class="bg-[#384e5e] hover:bg-[#466277] text-[#66c0f4] text-xs px-2 py-0.5 rounded-sm transition">Multiplayer</span>
+                            <span class="bg-[#384e5e] hover:bg-[#466277] text-[#66c0f4] text-xs px-2 py-0.5 rounded-sm transition">Cute</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Pricing & Buy -->
+                    <div class="flex items-center justify-between mt-auto">
+                        <div class="text-steam-light text-xl">Free to Play</div>
+                        <button class="bg-gradient-to-b from-[#799905] to-[#536904] hover:from-[#8ed410] hover:to-[#6aa610] text-[#d2efa9] px-6 py-2 rounded-sm shadow-[2px_2px_5px_rgba(0,0,0,0.5)] font-semibold flex items-center space-x-2 group-hover:animate-pulse">
+                            <span>Play Now</span>
+                        </button>
+                    </div>
+                    <!-- Platform icons -->
+                    <div class="flex space-x-2 mt-2 text-[#4c555d] text-lg">
+                        <i class="ph-fill ph-windows-logo hover:text-white"></i>
+                        <i class="ph-fill ph-apple-logo hover:text-white"></i>
+                        <i class="ph-fill ph-linux-logo hover:text-white"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Special Offers -->
+            <h2 class="text-white text-lg tracking-wider mb-2 font-medium">SPECIAL OFFERS</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
+                <!-- Offer 1 -->
+                <div class="bg-[#0a141d] capsule cursor-pointer shadow-steam-capsule flex flex-col h-[280px]">
+                    <div class="h-40 w-full overflow-hidden">
+                        <img src="https://placehold.co/400x200/18181b/dc2626?text=Doom+Spire" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-3 flex-1 flex flex-col justify-between bg-gradient-to-b from-[#1b2838] to-[#0a141d]">
+                        <div>
+                            <h4 class="text-white font-medium truncate">Doom Spire: Awakening</h4>
+                            <div class="text-xs text-steam-blue mt-1">Midweek Madness</div>
+                        </div>
+                        <div class="flex items-center space-x-2 mt-auto self-end bg-steam-dark p-0.5 rounded-sm">
+                            <div class="bg-steam-discountBg text-steam-discountText font-bold px-2 py-1 text-sm">-50%</div>
+                            <div class="flex flex-col px-2 text-right">
+                                <span class="text-gray-500 line-through text-[10px] leading-tight">$39.99</span>
+                                <span class="text-steam-green text-sm leading-tight">$19.99</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Offer 2 -->
+                <div class="bg-[#0a141d] capsule cursor-pointer shadow-steam-capsule flex flex-col h-[280px]">
+                    <div class="h-40 w-full overflow-hidden">
+                        <img src="https://placehold.co/400x200/18181b/eab308?text=Cyber+Drift" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-3 flex-1 flex flex-col justify-between bg-gradient-to-b from-[#1b2838] to-[#0a141d]">
+                        <div>
+                            <h4 class="text-white font-medium truncate">Cyber Drift 2077</h4>
+                            <div class="text-xs text-steam-blue mt-1">Daily Deal</div>
+                        </div>
+                        <div class="flex items-center space-x-2 mt-auto self-end bg-steam-dark p-0.5 rounded-sm">
+                            <div class="bg-steam-discountBg text-steam-discountText font-bold px-2 py-1 text-sm">-75%</div>
+                            <div class="flex flex-col px-2 text-right">
+                                <span class="text-gray-500 line-through text-[10px] leading-tight">$59.99</span>
+                                <span class="text-steam-green text-sm leading-tight">$14.99</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Offer 3 (Multiple small) -->
+                <div class="grid grid-rows-2 gap-4 h-[280px]">
+                    <!-- Mini 1 -->
+                    <div class="bg-[#0a141d] capsule cursor-pointer shadow-steam-capsule flex items-center h-full">
+                        <div class="w-1/2 h-full overflow-hidden">
+                            <img src="https://placehold.co/200x120/18181b/10b981?text=Cozy+Farm" class="w-full h-full object-cover">
+                        </div>
+                        <div class="w-1/2 p-2 flex flex-col justify-between h-full bg-gradient-to-b from-[#1b2838] to-[#0a141d]">
+                            <h4 class="text-white text-sm font-medium truncate">Cozy Farm</h4>
+                            <div class="flex items-center self-end bg-steam-dark p-0.5 mt-2 rounded-sm w-full max-w-fit">
+                                <div class="bg-steam-discountBg text-steam-discountText font-bold px-1 text-xs">-20%</div>
+                                <div class="flex flex-col px-1 text-right">
+                                    <span class="text-gray-500 line-through text-[9px] leading-none">$19.99</span>
+                                    <span class="text-steam-green text-xs leading-none mt-0.5">$15.99</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Mini 2 -->
+                    <div class="bg-[#0a141d] capsule cursor-pointer shadow-steam-capsule flex items-center h-full">
+                        <div class="w-1/2 h-full overflow-hidden">
+                            <img src="https://placehold.co/200x120/18181b/3b82f6?text=Space+Miner" class="w-full h-full object-cover">
+                        </div>
+                        <div class="w-1/2 p-2 flex flex-col justify-between h-full bg-gradient-to-b from-[#1b2838] to-[#0a141d]">
+                            <h4 class="text-white text-sm font-medium truncate">Space Miner</h4>
+                            <div class="flex items-center self-end bg-steam-dark p-0.5 mt-2 rounded-sm w-full max-w-fit">
+                                <div class="bg-steam-discountBg text-steam-discountText font-bold px-1 text-xs">-33%</div>
+                                <div class="flex flex-col px-1 text-right">
+                                    <span class="text-gray-500 line-through text-[9px] leading-none">$14.99</span>
+                                    <span class="text-steam-green text-xs leading-none mt-0.5">$10.04</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Browse Header -->
+            <div class="flex items-center justify-between border-b border-gray-700 pb-2 mb-4">
+                <div class="flex space-x-6 text-sm">
+                    <button class="text-white pb-2 border-b-2 border-steam-blue">New & Trending</button>
+                    <button class="text-steam-light hover:text-white pb-2">Top Sellers</button>
+                    <button class="text-steam-light hover:text-white pb-2">Popular Upcoming</button>
+                    <button class="text-steam-light hover:text-white pb-2">Specials</button>
+                </div>
+                <button class="text-steam-blue text-xs border border-gray-600 px-3 py-1 rounded-sm hover:border-steam-light">More Content</button>
+            </div>
+
+            <!-- List View -->
+            <div class="bg-[#000000] bg-opacity-20 mb-20 flex flex-col">
+                <!-- List Item 1 -->
+                <a href="#" class="flex items-center p-2 border-b border-[#2a475e] hover:bg-[#2a475e]/50 transition group relative">
+                    <img src="https://placehold.co/184x69/18181b/c084fc?text=Femboy+Island" class="w-32 h-[46px] object-cover mr-4 shadow-sm group-hover:scale-[1.02] transition">
+                    <div class="flex-1 flex justify-between items-center pr-4">
+                        <div>
+                            <div class="text-white text-sm font-medium">Femboy Island</div>
+                            <div class="flex space-x-1 mt-1">
+                                <i class="ph-fill ph-windows-logo text-[#4c555d] text-xs"></i>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-6 text-xs text-[#384e5e]">
+                            <span class="hidden md:inline">Action, RPG, Multiplayer, Cute</span>
+                            <div class="text-steam-light w-20 text-right">Free to Play</div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- List Item 2 -->
+                <a href="#" class="flex items-center p-2 border-b border-[#2a475e] hover:bg-[#2a475e]/50 transition group">
+                    <img src="https://placehold.co/184x69/18181b/f43f5e?text=Vampire+Hunters" class="w-32 h-[46px] object-cover mr-4 shadow-sm group-hover:scale-[1.02] transition">
+                    <div class="flex-1 flex justify-between items-center pr-4">
+                        <div>
+                            <div class="text-white text-sm font-medium">Vampire Hunters</div>
+                            <div class="flex space-x-1 mt-1">
+                                <i class="ph-fill ph-windows-logo text-[#4c555d] text-xs"></i>
+                                <i class="ph-fill ph-apple-logo text-[#4c555d] text-xs"></i>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-6 text-xs text-[#384e5e]">
+                            <span class="hidden md:inline">Indie, Action, Roguelike</span>
+                            <div class="text-steam-light w-20 text-right">$4.99</div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- List Item 3 -->
+                <a href="#" class="flex items-center p-2 border-b border-[#2a475e] hover:bg-[#2a475e]/50 transition group">
+                    <img src="https://placehold.co/184x69/18181b/8b5cf6?text=Stellar+Engine" class="w-32 h-[46px] object-cover mr-4 shadow-sm group-hover:scale-[1.02] transition">
+                    <div class="flex-1 flex justify-between items-center pr-4">
+                        <div>
+                            <div class="text-white text-sm font-medium">Stellar Engine 4</div>
+                            <div class="flex space-x-1 mt-1">
+                                <i class="ph-fill ph-windows-logo text-[#4c555d] text-xs"></i>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-6 text-xs text-[#384e5e]">
+                            <span class="hidden md:inline">Software, Utility, Development</span>
+                            <div class="flex items-center bg-steam-dark p-0.5 rounded-sm">
+                                <div class="bg-steam-discountBg text-steam-discountText font-bold px-1 text-[10px]">-15%</div>
+                                <div class="flex flex-col px-1 text-right">
+                                    <span class="text-gray-500 line-through text-[8px] leading-none">$99.99</span>
+                                    <span class="text-steam-green text-[11px] leading-none mt-0.5">$84.99</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[#171a21] border-t border-[#363c44] mt-auto py-8">
+        <div class="max-w-[940px] w-full mx-auto px-4 flex flex-col md:flex-row justify-between items-start md:items-center text-[11px] text-[#8f98a0]">
+            <div class="flex items-center space-x-4 mb-4 md:mb-0">
+                <i class="ph-fill ph-game-controller text-4xl text-[#363c44]"></i>
+                <div>
+                    <p class="mb-1">&copy; 2026 Gay Launcher Corporation. All rights reserved. All trademarks are property of their respective owners in the US and other countries.</p>
+                    <p>VAT included in all prices where applicable.</p>
+                    <div class="mt-2 space-x-3 text-[#c6d4df]">
+                        <a href="#" class="hover:text-white">Privacy Policy</a> | 
+                        <a href="#" class="hover:text-white">Legal</a> | 
+                        <a href="#" class="hover:text-white">Gay Launcher Subscriber Agreement</a> | 
+                        <a href="#" class="hover:text-white">Refunds</a> | 
+                        <a href="#" class="hover:text-white">Cookies</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col items-end space-y-2">
+                <button class="flex items-center space-x-1 hover:text-white transition">
+                    <span>About Gay Launcher</span>
+                </button>
+                <div class="flex space-x-3 text-lg text-gray-500">
+                    <a href="#" class="hover:text-white transition"><i class="ph-fill ph-facebook-logo"></i></a>
+                    <a href="#" class="hover:text-white transition"><i class="ph-fill ph-twitter-logo"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

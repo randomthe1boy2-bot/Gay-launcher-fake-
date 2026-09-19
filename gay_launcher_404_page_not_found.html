@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gay Launcher - 404 Page Not Found</title>
+    
+    <!-- Discord / Open Graph Meta Tags -->
+    <meta property="og:title" content="404 Not Found - Gay Launcher">
+    <meta property="og:description" content="Oops! Looks like you ventured too far into the unknown.">
+    <meta property="og:image" content="https://placehold.co/1200x630/171a21/66c0f4?text=404+Error+-+Gay+Launcher&font=Montserrat">
+    <meta property="og:url" content="https://store.gaylauncher.net/404">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#171a21">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Motiva+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Motiva Sans"', 'Arial', 'Helvetica', 'sans-serif'],
+                    },
+                    colors: {
+                        steam: {
+                            base: '#1b2838',
+                            header: '#171a21',
+                            nav: '#3d4450',
+                            blue: '#66c0f4',
+                            light: '#c6d4df',
+                            dark: '#101822',
+                            green: '#A4D007',
+                            btnGreen1: '#799905',
+                            btnGreen2: '#536904'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { background-color: #1b2838; }
+        /* Scrollbar to match Steam */
+        ::-webkit-scrollbar { width: 12px; }
+        ::-webkit-scrollbar-track { background: #171a21; }
+        ::-webkit-scrollbar-thumb { background: #434953; border-radius: 2px; }
+        ::-webkit-scrollbar-thumb:hover { background: #66c0f4; }
+        
+        .bg-page-gradient {
+            background: radial-gradient(circle at center, #2a3f5a 0%, #1b2838 100%);
+        }
+        
+        .text-glow {
+            text-shadow: 0 0 20px rgba(102, 192, 244, 0.2);
+        }
+    </style>
+</head>
+<body class="text-steam-light font-sans overflow-x-hidden min-h-screen flex flex-col">
+
+    <!-- Global Header -->
+    <header class="bg-steam-header w-full flex justify-center py-4 px-4 sticky top-0 z-50 shadow-md">
+        <div class="max-w-[940px] w-full flex justify-between items-center">
+            <!-- Logo & Main Nav -->
+            <div class="flex items-center space-x-10">
+                <a href="/" class="flex items-center space-x-2 text-2xl font-bold text-steam-light hover:text-white transition">
+                    <i class="ph-fill ph-game-controller text-steam-blue text-3xl"></i>
+                    <span class="tracking-wider uppercase">Gay Launcher</span>
+                </a>
+                
+                <nav class="hidden md:flex space-x-6 text-sm font-semibold uppercase tracking-wide">
+                    <a href="/" class="text-steam-light hover:text-white transition">Store</a>
+                    <a href="#" class="text-steam-light hover:text-white transition">Community</a>
+                    <a href="#" class="text-steam-light hover:text-white transition">About</a>
+                    <a href="#" class="text-steam-light hover:text-white transition">Support</a>
+                </nav>
+            </div>
+
+            <!-- User Actions -->
+            <div class="hidden md:flex items-center space-x-4 text-xs">
+                <button class="bg-[#5c7e10] hover:bg-[#799905] text-white px-3 py-1 rounded-sm flex items-center space-x-1 transition">
+                    <i class="ph-fill ph-download-simple"></i>
+                    <span>Install Launcher</span>
+                </button>
+                <div class="flex items-center space-x-2 border-l border-gray-600 pl-4">
+                    <a href="#" class="hover:text-white text-gray-300">login</a>
+                    <span class="text-gray-500">|</span>
+                    <a href="#" class="hover:text-white text-gray-300">language <i class="ph ph-caret-down inline"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main 404 Content -->
+    <main class="flex-grow w-full flex items-center justify-center bg-page-gradient px-4 py-20">
+        <div class="max-w-2xl w-full text-center flex flex-col items-center">
+            
+            <!-- Error Code -->
+            <h1 class="text-8xl md:text-9xl font-bold text-[#3d4a5d] tracking-tighter mb-2 select-none">
+                404
+            </h1>
+            
+            <!-- Error Title -->
+            <h2 class="text-3xl md:text-4xl text-white font-light tracking-wide uppercase mb-6 text-glow">
+                Page Not Found
+            </h2>
+            
+            <!-- Error Message -->
+            <p class="text-[#8f98a0] text-lg md:text-xl mb-10 max-w-lg mx-auto">
+                Oops! Looks like you ventured too far into the unknown. The page you are looking for does not exist or has been moved.
+            </p>
+            
+            <!-- Action Button -->
+            <a href="/" class="bg-gradient-to-b from-steam-btnGreen1 to-steam-btnGreen2 hover:from-[#8ed410] hover:to-[#6aa610] text-[#d2efa9] px-8 py-3 rounded-sm shadow-[2px_2px_5px_rgba(0,0,0,0.5)] font-semibold flex items-center space-x-2 transition-all duration-200 transform hover:scale-105">
+                <i class="ph-bold ph-arrow-left"></i>
+                <span>Return to Store</span>
+            </a>
+            
+            <!-- Search Fallback -->
+            <div class="mt-16 w-full max-w-md mx-auto">
+                <p class="text-sm text-[#4c555d] mb-3 uppercase tracking-wider">Search for a game instead</p>
+                <div class="relative">
+                    <input type="text" placeholder="search the store..." class="w-full bg-[#101822] border border-[#2a475e] rounded text-sm text-white px-4 py-2.5 focus:outline-none focus:border-steam-blue placeholder-[#4c555d] shadow-[inset_0_1px_4px_rgba(0,0,0,0.5)] transition-colors">
+                    <button class="absolute right-3 top-2 text-[#66c0f4] hover:text-white">
+                        <i class="ph ph-magnifying-glass font-bold text-lg"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#171a21] border-t border-[#363c44] mt-auto py-8">
+        <div class="max-w-[940px] w-full mx-auto px-4 flex flex-col md:flex-row justify-between items-start md:items-center text-[11px] text-[#8f98a0]">
+            <div class="flex items-center space-x-4 mb-4 md:mb-0">
+                <i class="ph-fill ph-game-controller text-4xl text-[#363c44]"></i>
+                <div>
+                    <p class="mb-1">&copy; 2026 Gay Launcher Corporation. All rights reserved. All trademarks are property of their respective owners in the US and other countries.</p>
+                    <p>VAT included in all prices where applicable.</p>
+                    <div class="mt-2 space-x-3 text-[#c6d4df]">
+                        <a href="#" class="hover:text-white">Privacy Policy</a> | 
+                        <a href="#" class="hover:text-white">Legal</a> | 
+                        <a href="#" class="hover:text-white">Gay Launcher Subscriber Agreement</a> | 
+                        <a href="#" class="hover:text-white">Refunds</a> | 
+                        <a href="#" class="hover:text-white">Cookies</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col items-end space-y-2">
+                <button class="flex items-center space-x-1 hover:text-white transition">
+                    <span>About Gay Launcher</span>
+                </button>
+                <div class="flex space-x-3 text-lg text-gray-500">
+                    <a href="#" class="hover:text-white transition"><i class="ph-fill ph-facebook-logo"></i></a>
+                    <a href="#" class="hover:text-white transition"><i class="ph-fill ph-twitter-logo"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
